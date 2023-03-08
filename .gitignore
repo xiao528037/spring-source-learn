@@ -1,4 +1,4 @@
-target/
+**/target/
 !.mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
@@ -8,6 +8,7 @@ target/
 .idea/jarRepositories.xml
 .idea/compiler.xml
 .idea/libraries/
+
 *.iws
 *.iml
 *.ipr
@@ -28,6 +29,7 @@ target/
 /dist/
 /nbdist/
 /.nb-gradle/
+/target/
 build/
 !**/src/main/**/build/
 !**/src/test/**/build/
