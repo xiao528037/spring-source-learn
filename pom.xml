@@ -8,6 +8,7 @@
     <name>spring-source-learn</name>
     <modules>
         <module>my-spring</module>
+        <module>my-spring-2</module>
     </modules>
 
     <dependencyManagement>

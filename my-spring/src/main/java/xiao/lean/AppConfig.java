@@ -1,5 +1,7 @@
 package xiao.lean;
 
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.support.ResourceBundleMessageSource;
 import xiao.lean.spring.ComponentScan;
 
 /**
@@ -10,4 +12,10 @@ import xiao.lean.spring.ComponentScan;
  */
 @ComponentScan("xiao.lean.service")
 public class AppConfig {
+    @Bean
+    public ResourceBundleMessageSource resourceBundleMessageSource() {
+        ResourceBundleMessageSource message = new ResourceBundleMessageSource();
+        message.setBasename("message");
+        return message;
+    }
 }
