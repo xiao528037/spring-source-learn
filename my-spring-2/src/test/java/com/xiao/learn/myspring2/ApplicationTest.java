@@ -1,16 +1,17 @@
 package com.xiao.learn.myspring2;
 
 
-
 import com.xiao.learn.myspring2.domain.A;
 import com.xiao.learn.myspring2.domain.B;
 import com.xiao.learn.myspring2.domain.C;
 import com.xiao.learn.myspring2.domain.D;
+import com.xiao.learn.myspring2.service.OrderService;
+import com.xiao.learn.myspring2.service.UserService;
 import org.junit.jupiter.api.Test;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.core.OrderComparator;
 import org.springframework.core.annotation.AnnotationAwareOrderComparator;
-import org.springframework.core.annotation.Order;
 import org.springframework.core.type.AnnotationMetadata;
 import org.springframework.core.type.ClassMetadata;
 import org.springframework.core.type.classreading.MetadataReader;
@@ -78,6 +79,29 @@ public class ApplicationTest {
     public void t4() {
         AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
         System.out.println(context.getBean("userService"));
+    }
+
+    @Test
+    public void t5(){
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
+
+        context.refresh();
+        Object userService = context.getBean("userService");
+        System.out.println(userService);
+        userService = context.getBean("userService");
+        System.out.println(userService);
+        userService = context.getBean("userService");
+        System.out.println(userService);
+
+    }
+
+    @Test
+    public void t6(){
+
+        AnnotationConfigApplicationContext context = new AnnotationConfigApplicationContext(AppConfig.class);
+        UserService userService = (UserService) context.getBean("userService");
+        OrderService orderService = (OrderService) context.getBean("orderService");
+        userService.printUser();
     }
 
 }

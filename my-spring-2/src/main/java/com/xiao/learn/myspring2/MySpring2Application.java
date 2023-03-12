@@ -1,20 +1,14 @@
 package com.xiao.learn.myspring2;
 
-import com.xiao.learn.myspring2.convert.StringToUserConvert;
 import com.xiao.learn.myspring2.convert.StringToUserPropertyEditor;
 import com.xiao.learn.myspring2.domain.User;
 import com.xiao.learn.myspring2.service.UserService;
 import org.springframework.beans.SimpleTypeConverter;
-import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.core.convert.support.DefaultConversionService;
 import org.springframework.core.io.Resource;
-import org.springframework.core.io.ResourceLoader;
 
 import java.io.IOException;
 import java.util.Locale;
-import java.util.Properties;
 
 
 public class MySpring2Application {

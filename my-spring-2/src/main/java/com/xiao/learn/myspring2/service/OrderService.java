@@ -5,14 +5,13 @@ import org.springframework.stereotype.Component;
 /**
  * @author aloneMan
  * @projectName spring-source-learn
- * @createTime 2023-03-11 00:40:20
+ * @createTime 2023-03-12 15:40:40
  * @description
  */
-//@Component
-public class UserService {
+@Component
+public class OrderService {
 
-
-    public void printUser() {
-        System.out.println("userService");
-    }
+   public void print() {
+      System.out.println("OrderService");
+   }
 }

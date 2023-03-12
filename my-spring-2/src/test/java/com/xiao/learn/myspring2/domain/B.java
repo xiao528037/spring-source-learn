@@ -2,8 +2,6 @@ package com.xiao.learn.myspring2.domain;
 
 import org.springframework.core.Ordered;
 
-import java.util.Comparator;
-
 /**
  * @author aloneMan
  * @projectName spring-source-learn
