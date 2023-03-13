@@ -1,5 +1,6 @@
 package com.xiao.leran.spring.myspring3.processor;
 
+import com.xiao.leran.spring.myspring3.service.OrderService;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.PropertyValues;
 import org.springframework.beans.factory.config.InstantiationAwareBeanPostProcessor;
@@ -26,7 +27,7 @@ public class MyInstantiationAwareBeanPostProcessor implements InstantiationAware
 
     @Override
     public PropertyValues postProcessProperties(PropertyValues pvs, Object bean, String beanName) throws BeansException {
-        System.out.println(">>> 属性赋值");
+        System.out.println(">>> ProcessProperties 属性赋值");
         return InstantiationAwareBeanPostProcessor.super.postProcessProperties(pvs, bean, beanName);
     }
 

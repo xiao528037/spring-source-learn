@@ -21,6 +21,11 @@ public class OrderService implements InitializingBean, BeanNameAware {
         System.out.println(">>> 实例化");
     }
 
+    private String name;
+
+    public void setName(String name) {
+        this.name = name;
+    }
 
     @PostConstruct
     public void init() {
@@ -33,7 +38,7 @@ public class OrderService implements InitializingBean, BeanNameAware {
 
     @Override
     public void afterPropertiesSet() throws Exception {
-        System.out.println(">>> 属性赋值后");
+        System.out.println(">>> Properties");
     }
 
     @Override
@@ -41,4 +46,10 @@ public class OrderService implements InitializingBean, BeanNameAware {
         System.out.println(">>> 设置BeanName");
     }
 
+    @Override
+    public String toString() {
+        return "OrderService{" +
+                "name='" + name + '\'' +
+                '}';
+    }
 }

@@ -22,6 +22,7 @@ public class MyBeanDefinitionProcessor implements MergedBeanDefinitionPostProces
      */
     @Override
     public void postProcessMergedBeanDefinition(RootBeanDefinition beanDefinition, Class<?> beanType, String beanName) {
+        beanDefinition.getPropertyValues().add("name", "xiao");
         System.out.println(">>> 对BeanDefinition进行修改");
     }
 }
